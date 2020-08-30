@@ -1,4 +1,4 @@
-# Web-Development
+# Inernshala Web-Development Training
 This repository consist of project files which should be uploaded to Web-Development Training.
 
 ### Tools that will be need to View and Modify this project (For Windows, MacOS and Linux)
