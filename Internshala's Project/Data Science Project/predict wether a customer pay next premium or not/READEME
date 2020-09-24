@@ -1,1 +1,30 @@
+Approach for predicting:
+1. Hypothesis is already given in the question is Predict the probability of making payment by
+costumer
+2. Load data, read data and all the other basic commands used to look at data.
+3. Missing value is treated:
+(i) There are four columns have missing values.
+(ii) For filling missing value ‘fillna’ function is used with mean and max value.
+4. Univariate analysis is performed on data:
+(i) “Age in days” column had large value so transformed to reduced error in prediction.
+(ii) “perc_premium_paid_by_cash_credit” column has skewness, so that transformed.
+5. Bivariate Analysis is also performed:
+(i) Correlation is calculated between all continues variable and seems no variable is very
+less or very high correlated to the target variable.
 
+6. Outlier treatment:
+(i) Box plotting and IQR detect outlier.
+(ii) Outliers replaced with mean or max value of that column.
+7. Predictive modeling:
+(i) Linear regression used and validated with validation data set and auc score is calculated.
+(ii) Logistic regression used and validated with validation data set and auc score is
+calculated.
+(iii) Decision tree used and validated with validation data set and auc score is calculated.
+(iv) Found that auc score for linear regression is highest among these and used to predict
+final solution.
+(v) Catboost and xgboost is also more accurate for the dataset but not used as mention in
+contest rule-“ use only those algorithms and concepts that have been taught in the
+training”
+
+8. Submission: a csv file crated with ‘id’ and ‘target’ columns and in target, the predicted
+probability is stored.
